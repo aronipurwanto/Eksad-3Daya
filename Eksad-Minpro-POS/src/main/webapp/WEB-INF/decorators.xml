@@ -15,12 +15,13 @@
 		<pattern>/*</pattern>
 	</decorator>
 
-	<decorator name="home" page="home.jsp">
+	<!-- decorator name="home" page="home.jsp">
 		<pattern>/home.html</pattern>
-	</decorator>
+	</decorator-->
 
 	<decorator name="login" page="login.jsp">
 		<pattern>/login.jsp</pattern>
 		<pattern>/login.html</pattern>
+		<pattern>/login</pattern>
 	</decorator>
 </decorators>

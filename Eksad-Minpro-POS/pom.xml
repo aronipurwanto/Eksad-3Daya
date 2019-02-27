@@ -10,15 +10,30 @@
 	<properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>5.1.4.RELEASE</org.springframework-version>
-		<org.springframework.security-version>4.2.9.RELEASE</org.springframework.security-version>
+		<org.springframework.security-version>4.2.11.RELEASE</org.springframework.security-version>
 		<org.aspectj-version>1.9.2</org.aspectj-version>
 		<org.slf4j-version>1.7.25</org.slf4j-version>
 		<org.postgresql-version>42.2.5</org.postgresql-version>
 		<org.hibernate-version>5.4.0.Final</org.hibernate-version>
 		<com.fasterxml.jackson-version>2.9.8</com.fasterxml.jackson-version>
 		<sitemesh-version>2.5-atlassian-11</sitemesh-version>
+		<org.log4j-version>2.11.2</org.log4j-version>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -140,7 +155,7 @@
 			<artifactId>spring-security-core</artifactId>
 			<version>${org.springframework.security-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-acl</artifactId>
@@ -246,6 +261,24 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+
+		<!-- Log4j start -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${org.log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${org.log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-web</artifactId>
+			<version>${org.log4j-version}</version>
+		</dependency>
+		<!-- Log4j end -->
 
 		<!-- Test -->
 		<dependency>
